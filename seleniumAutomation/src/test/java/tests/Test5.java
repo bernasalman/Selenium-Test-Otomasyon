@@ -37,5 +37,10 @@ public class Test5 {
         System.out.println(message2);
 
 
+///dinamik element (yani sayfa her yenilendiğinde id'si değişen) bulma
+        //div/button[starts-with(text(), 'Click Me')]  ----dinamik elementi içinde yazan textten bulma
+        //div[last()]/button  ----dinamik elementi div içindeki sırasından bulma. burada son sırada olduğu içi last() yazıldı.
+        WebElement dynamicClickButton = driver.findElement(By.xpath("//div[last()]/button"));
+        dynamicClickButton.click();
     }
 }
